@@ -1,7 +1,6 @@
-import React from "react";
+import { DATA } from "@/data/resume";
 import BlurFade from "./magicui/blur-fade";
 import { ProjectCard } from "./project-card";
-import { DATA } from "@/data/resume";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -26,11 +25,9 @@ export default function ProjectSection({ isHome }: Props) {
               key={project.title}
               title={project.title}
               description={project.description}
-              dates={project.dates}
               tags={project.technologies}
               image={project.image}
               video={project.video}
-              links={project.links}
             />
           </BlurFade>
         );
