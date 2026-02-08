@@ -1,9 +1,9 @@
 import { Icons } from "@/components/icons";
-import { BriefcaseBusinessIcon, HomeIcon, NotebookIcon } from "lucide-react";
+import { BriefcaseBusinessIcon, HomeIcon } from "lucide-react";
 
 export const DATA = {
   name: "Vaibhav Tanwar",
-  initials: "VT", 
+  initials: "VT",
   url: "https://www.linkedin.com/in/vaibtan11/",
   location: "New Delhi, India",
   locationLink: "https://www.google.com/maps/place/New+Delhi,+Delhi/@28.5272527,77.0441739,11z/data=!3m1!4b1!4m15!1m8!3m7!1s0x30635ff06b92b791:0xd78c4fa1854213a6!2sIndia!3b1!8m2!3d20.593684!4d78.96288!16zL20vMDNyazA!3m5!1s0x390cfd5b347eb62d:0x52c2b7494e204dce!8m2!3d28.6139298!4d77.2088282!16zL20vMGRsdjA?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D",
@@ -12,8 +12,8 @@ export const DATA = {
   summary:
     "I’m a 21 year old software developer and a recent [CS + Applied Math](/work#education) graduate, building end-to-end robust AI driven workflows and platforms with a focus on reliability, scale, and impact. Previously worked across [Computer Vision and Full Stack systems.](/work) and have extensively built interdisciplinary projects which can be [viewed here](/work#projects). I'm an avid learner who likes [algorithmic problem solving](https://leetcode.com/u/tupac_x11/) and am heavily curious in learning about multi modal inference systems at scale. Currently seeking roles in AI, backend, or data engineering where I can own critical paths, move quickly with lean teams, and ship value. Founder‑curious and startup‑minded, I’m excited by zero‑to‑one challenges, building with small, high‑trust teams, and partnering closely with founders to take AI products from prototype to reliable, scalable systems. If that resonates, let’s connect.",
   avatarUrl:
-    "/techie_emoji.png", 
-  skills: [ 
+    "/techie_emoji.png",
+  skills: [
     "Python",
     "TypeScript",
     "C++",
@@ -41,7 +41,6 @@ export const DATA = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/work", icon: BriefcaseBusinessIcon, label: "Work" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "vaibhav21296@iiitd.ac.in",
@@ -402,44 +401,4 @@ export const DATA = {
       video: "",
     },
   ],
-  hackathons: [
-    {
-      title: "Hack Western 5",
-      dates: "November 23rd - 25th, 2018",
-      location: "London, Ontario",
-      description:
-        "Developed a mobile application which delivered bedtime stories to children using augmented reality.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-      links: [],
-    },
-    {
-      title: "Hack The North",
-      dates: "September 14th - 16th, 2018",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed a mobile application which delivers university campus wide events in real time to all students.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-      links: [],
-    },
-    {
-      title: "FirstNet Public Safety Hackathon",
-      dates: "March 23rd - 24th, 2018",
-      location: "San Francisco, California",
-      description:
-        "Developed a mobile application which communcicates a victims medical data from inside an ambulance to doctors at hospital.",
-      icon: "public",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/firstnet.png",
-      links: [],
-    },
-  ],
-  gqlConfig: {
-    domain: "https://gql.hashnode.com/",
-    host: "vaibtan.hashnode.dev",
-    series: "srl-series",
-  },
 } as const;

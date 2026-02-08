@@ -1,17 +1,21 @@
 import Navbar from "@/components/navbar";
-import ApolloClientProvider from "@/components/providers/apollo-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const fontSans = FontSans({
+const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const fontSerif = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
@@ -59,19 +63,19 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
+          "min-h-screen bg-background font-sans antialiased max-w-6xl mx-auto py-12 sm:py-24 px-4 sm:px-8 lg:px-16 relative",
           fontSans.variable,
+          fontSerif.variable
         )}
       >
-        <ApolloClientProvider>
-          <ThemeProvider attribute="class" defaultTheme="dark">
-            <TooltipProvider delayDuration={0}>
-              {children}
-              <Navbar />
-              <Toaster />
-            </TooltipProvider>
-          </ThemeProvider>
-        </ApolloClientProvider>
+        <div className="bg-noise" />
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <TooltipProvider delayDuration={0}>
+            {children}
+            <Navbar />
+            <Toaster />
+          </TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

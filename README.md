@@ -1,51 +1,53 @@
-# Timeline Portfolio
+# Vaibhav Tanwar - Portfolio
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), forked from [dillionverma/portfolio](https://github.com/dillionverma/portfolio).
+A high-performance, visually immersive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Featuring a dark-mode first design with glassmorphism effects, custom animations, and a focus on Full Stack AI Engineering.
 
-## Features
+## ✨ Features
 
-- ⌛ Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- 💪 Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI, Aceternity UI
+- **Cyberpunk Aesthetic**: sleek, dark-mode design with neon accents and grainy gradients.
+- **Interactive Visuals**:
+  - **CodeGraph**: A custom-built circuit visualization representing the Full Stack AI tech stack.
+  - **Orbiting Visuals**: Dynamic animations in the About section.
+- **Bento Grid Tech Stack**: A structured, visual representation of skills (Frontend, Backend, Database, ML).
+- **Glassmorphism UI**: Premium card designs with noise textures and hover effects.
+- **Responsive & Fast**: Optimized for all devices using Next.js 14 and Tailwind CSS.
 
-- ✨ Includes Hashnode blog integration (with newsletter subscription!)
-- 📱 Responsive for different devices
-- 🚀 Optimized for Next.js
+## 🛠️ Tech Stack
 
-## Motivation
+- **Framework**: [Next.js 14](https://nextjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [Shadcn/UI](https://ui.shadcn.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/), [Magic UI](https://magicui.design/)
+- **Icons**: [Lucide React](https://lucide.dev/), [Simple Icons](https://simpleicons.org/)
 
-I had been developing my third portfolio design (yes, the prev 2 were over-designed) named exactly `timeline-portfolio` (still on branch _main_) who's core idea was to showcase my dev journey (projects, learnings, experiences, tech, etc.) and was centered around the Hashnode blog. Designing is fun; developing it from scratch is tedious and time-taking as everytime I start developing my portfolio I put it as last priority (with other apps on top).
+## 🚀 Getting Started Locally
 
-I'm glad I found MagicUI and it's free portfolio template, it was made with the same design tastes I have (as of now) - classy and minimal. No brainer for me, snagged it right away and integrated my prev design's Hashnode logic into it. Finally the personal site is ready (that too in 2 days).
+1.  **Clone the repository:**
 
-# Getting Started Locally
+    ```bash
+    git clone https://github.com/Vaibtan/portfolio.git
+    cd portfolio
+    ```
 
-1. Fork this repository or use it as a template.
-2. Clone the forked repository to your local machine:
+2.  **Install dependencies:**
 
-   ```bash
-   git clone https://github.com/<USERNAME>/timeline-portfolio
-   ```
+    ```bash
+    npm install
+    # or
+    bun install
+    ```
 
-3. Move to the cloned directory:
+3.  **Start the development server:**
 
-   ```bash
-   cd timeline-portfolio
-   ```
+    ```bash
+    npm run dev
+    # or
+    bun dev
+    ```
 
-4. Install dependencies:
+4.  **Edit Configuration:**
+    Open `src/data/resume.tsx` to update your information, projects, and work experience.
 
-   ```bash
-   npm install
-   ```
+## 📄 License
 
-5. Start the local Server:
-
-   ```bash
-   npm dev
-   ```
-
-6. Open the [Config file -> resume.tsx](./src/data/resume.tsx) and make changes.
-
-# License
-
-Licensed under the [MIT license](https://github.com/parambirje/timeline-portfolio/blob/v2/LICENSE).
+Licensed under the MIT License.

@@ -1,116 +1,68 @@
-import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import Link from "next/link";
-import Markdown from "react-markdown";
+"use client";
 
-interface Props {
+import { ArrowRight } from "lucide-react";
+import NextLink from "next/link";
+
+interface ProjectProps {
   title: string;
-  href?: string;
   description: string;
-  dates: string;
   tags: readonly string[];
-  link?: string;
   image?: string;
   video?: string;
-  links?: readonly {
-    icon: React.ReactNode;
-    type: string;
-    href: string;
-  }[];
-  className?: string;
+  href?: string;
 }
 
-export function ProjectCard({
-  title,
-  href,
-  description,
-  dates,
-  tags,
-  link,
-  image,
-  video,
-  links,
-  className,
-}: Props) {
+export function ProjectCard({ title, description, tags, image, video, href }: ProjectProps) {
   return (
-    <Card
-      className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
-      }
-    >
-      <Link
-        href={href || "#"}
-        className={cn("block cursor-pointer", className)}
-      >
-        {video && (
-          <video
-            src={video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
-          />
-        )}
-        {image && (
-          <Image
-            src={image}
-            alt={title}
-            width={500}
-            height={300}
-            className="h-40 w-full overflow-hidden object-cover object-center"
-          />
-        )}
-      </Link>
-      <CardHeader className="px-2">
-        <div className="space-y-1">
-          <CardTitle className="mt-1 text-base">{title}</CardTitle>
-          <time className="font-sans text-xs">{dates}</time>
-          <div className="hidden font-sans text-xs underline print:visible">
-            {link?.replace("https://", "").replace("www.", "").replace("/", "")}
-          </div>
-          <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
-            {description}
-          </Markdown>
+    <NextLink href={href || "#"} className="group block w-full">
+      <div className="relative flex flex-col w-full overflow-hidden transition-all duration-300">
+        {/* Image Container */}
+        <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-white/10 bg-white/5 group-hover:border-white/20 transition-colors">
+          {video ? (
+            <video
+              src={video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          ) : (
+            <img
+              src={image}
+              alt={title}
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          )}
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
         </div>
-      </CardHeader>
-      <CardContent className="mt-auto flex flex-col px-2">
-        {tags && tags.length > 0 && (
-          <div className="mt-2 flex flex-wrap gap-1">
-            {tags?.map((tag) => (
-              <Badge
-                className="px-1 py-0 text-[10px]"
-                variant="secondary"
-                key={tag}
-              >
-                {tag}
-              </Badge>
-            ))}
+
+        {/* Content Below */}
+        <div className="mt-4 flex items-start justify-between gap-4">
+          <div className="space-y-1">
+            <h3 className="text-xl font-bold text-white group-hover:text-neon-green transition-colors flex items-center gap-2">
+              {title}
+            </h3>
+            <p className="text-sm text-neutral-400 line-clamp-2 max-w-md">
+              {description}
+            </p>
+            <div className="flex flex-wrap gap-2 mt-2">
+              {tags.slice(0, 4).map(tag => (
+                <span key={tag} className="text-xs text-white/60">
+                  {tag}{tag !== tags[tags.length - 1] && ","}
+                </span>
+              ))}
+            </div>
           </div>
-        )}
-      </CardContent>
-      <CardFooter className="px-2 pb-2">
-        {links && links.length > 0 && (
-          <div className="flex flex-row flex-wrap items-start gap-1">
-            {links?.map((link, idx) => (
-              <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
-                  {link.icon}
-                  {link.type}
-                </Badge>
-              </Link>
-            ))}
+
+          <div className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+            <ArrowRight className="text-white size-6" />
           </div>
-        )}
-      </CardFooter>
-    </Card>
+        </div>
+      </div>
+      <div className="mt-4 h-[1px] w-full bg-white/10 group-hover:bg-white/20 transition-colors" />
+    </NextLink>
   );
 }

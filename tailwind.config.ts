@@ -24,6 +24,7 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        serif: ["var(--font-serif)", ...fontFamily.serif],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -59,6 +60,11 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Custom colors for the dark mode data portfolio
+        "deep-black": "#0a0a0a",
+        "glass-white": "rgba(255, 255, 255, 0.05)",
+        "neon-green": "#00ff9d",
+        "purple-glow": "#bd00ff",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -74,10 +80,20 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "breathing-glow": {
+          "0%, 100%": { opacity: "0.5", transform: "scale(1)" },
+          "50%": { opacity: "0.8", transform: "scale(1.1)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "breathing-glow": "breathing-glow 4s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
       },
     },
   },
