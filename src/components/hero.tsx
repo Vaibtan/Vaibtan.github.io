@@ -29,7 +29,7 @@ export const Hero = () => {
 
                     <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                         <Button className="h-12 px-8 rounded-full bg-neon-green text-black hover:bg-neon-green/90 font-semibold" asChild>
-                            <Link href="#contact">Let's talk</Link>
+                            <Link href="#contact">Let&apos;s talk</Link>
                         </Button>
                         <Button variant="outline" className="h-12 px-8 rounded-full border-white/20 text-white hover:bg-white/10" asChild>
                             <Link href={DATA.contact.social.GitHub.url} target="_blank">View Code</Link>

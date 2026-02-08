@@ -28,7 +28,7 @@ export default function About() {
                             With expertise in <strong className="text-neon-green">React, Next.js, Node.js, Express, and PostgreSQL</strong>, I bring together intuitive design and efficient functionality. My experience with authentication systems, payment gateways, and cloud deployment makes me confident in delivering production-ready solutions for real-world clients.
                         </p>
                         <p>
-                            Whether it's a <span className="text-white italic font-serif">Startup MVP</span> or a scalable enterprise application, I focus on writing clean, maintainable code and creating experiences that users love.
+                            Whether it&apos;s a <span className="text-white italic font-serif">Startup MVP</span> or a scalable enterprise application, I focus on writing clean, maintainable code and creating experiences that users love.
                         </p>
                     </div>
 
