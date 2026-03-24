@@ -143,8 +143,11 @@ export const DATA = {
       href: "https://github.com/Vaibtan/ai-resume-analyzer",
       dates: "August 2025",
       active: true,
-      description:
-        "This project implements a sophisticated multimodal RAG system transforming YouTube videos into queryable knowledge bases through advanced frame extraction and caption analysis. Leveraging Gemini for inference and Qdrant for efficient vector storage, the system processes both visual and textual content to generate precise, timestamped responses to natural language queries.",
+      tagline: "Multimodal Video-to-Knowledge Retrieval System",
+      bullets: [
+        "This project implements a sophisticated multimodal RAG system transforming YouTube videos into queryable knowledge bases through advanced frame extraction and caption analysis.",
+        "Leveraging Gemini for inference and Qdrant for efficient vector storage, the system processes both visual and textual content to generate precise, timestamped responses to natural language queries.",
+      ],
       technologies: [
         "Python",
         "HuggingFace",
@@ -168,8 +171,11 @@ export const DATA = {
       href: "https://github.com/Vaibtan/Whatsapp-Memory-Integration",
       dates: "August 2025",
       active: true,
-      description:
-        "Architected a multimodal WhatsApp memory assistance pipeline (FastAPI + AsyncIO) that ingests text/voice/images via Twilio webhooks, classifies intent in real time via Groq LLM inference, embeds memories in Mem0's vector store for semantic recall, and serves analytics through idempotent SQLite transactions. ",
+      tagline: "Voice, Text & Image Memory Assistant over WhatsApp",
+      bullets: [
+        "Architected a multimodal WhatsApp memory assistance pipeline (FastAPI + AsyncIO) that ingests text/voice/images via Twilio webhooks.",
+        "Classifies intent in real time via Groq LLM inference, embeds memories in Mem0's vector store for semantic recall, and serves analytics through idempotent SQLite transactions.",
+      ],
       technologies: [
         "Python",
         "Twilio",
@@ -194,8 +200,11 @@ export const DATA = {
       href: "https://github.com/Vaibtan/ai-resume-analyzer",
       dates: "July 2025",
       active: true,
-      description:
-        "Developed a full-stack AI-powered resume analyzer using React, TypeScript, and Claude Sonnet integration, featuring real-time PDF processing, multi-dimensional scoring system (ATS, content, structure, skills), and comprehensive feedback generation for job seekers, integrating Zustand state management, Tailwind CSS, React Router, and Puter.js services for authentication, file system operations, and data persistence, delivering a responsive user interface with drag-and-drop functionality and visual score components.",
+      tagline: "AI-Driven Resume Scoring & Feedback Platform",
+      bullets: [
+        "Developed a full-stack AI-powered resume analyzer using React, TypeScript, and Claude Sonnet integration, featuring real-time PDF processing, multi-dimensional scoring system (ATS, content, structure, skills), and comprehensive feedback generation for job seekers.",
+        "Integrating Zustand state management, Tailwind CSS, React Router, and Puter.js services for authentication, file system operations, and data persistence, delivering a responsive user interface with drag-and-drop functionality and visual score components.",
+      ],
       technologies: [
         "React",
         "TypeScript",
@@ -224,8 +233,11 @@ export const DATA = {
       href: "https://github.com/Vaibtan/Multi-Agent-Tutoring-Bot",
       dates: "May 2025",
       active: true,
-      description:
-        "Developed a sophisticated tutoring chatbot leveraging Google's Agent Development Kit (ADK) principles with intelligent orchestration between specialized Math and Physics agents powered by Gemini API, integrating context-aware conversation management, autonomous query classification pipeline routing student queries to domain-specific agents and provide personalized responses through prompt engineering and tool integration.",
+      tagline: "Orchestrated Domain-Specific Tutoring Agents",
+      bullets: [
+        "Developed a sophisticated tutoring chatbot leveraging Google's Agent Development Kit (ADK) principles with intelligent orchestration between specialized Math and Physics agents powered by Gemini API.",
+        "Integrating context-aware conversation management, autonomous query classification pipeline routing student queries to domain-specific agents and provide personalized responses through prompt engineering and tool integration.",
+      ],
       technologies: [
         "Python",
         "FastAPI",
@@ -253,8 +265,12 @@ export const DATA = {
       href: "https://github.com/Vaibtan/Functional-App-Agent",
       dates: "August 2025",
       active: true,
-      description:
-        "Coding assistant built with LangGraph, simulating a multi-agent developer workflow to generate complete projects from natural language prompts. It utilizes Planner, Architect, and Coder agents to sequentially design, structure, and implement applications, leveraging tools for file I/O and code execution. The system is deployed with a FastAPI backend and a NiceGUI frontend for user interaction and project management",
+      tagline: "Multi-Agent Code Generation from Natural Language",
+      bullets: [
+        "Coding assistant built with LangGraph, simulating a multi-agent developer workflow to generate complete projects from natural language prompts.",
+        "It utilizes Planner, Architect, and Coder agents to sequentially design, structure, and implement applications, leveraging tools for file I/O and code execution.",
+        "The system is deployed with a FastAPI backend and a NiceGUI frontend for user interaction and project management.",
+      ],
       technologies: [
         "Python",
         "FastAPI",
@@ -278,8 +294,11 @@ export const DATA = {
       href: "https://github.com/Vaibtan/Distributed-Database-with-Raft-Consensus-Algorithm",
       dates: "July 2024",
       active: true,
-      description:
-        "Implemented a database storing string key-value pairs using Raft Consensus Algorithm, ensuring consistent data replication and fault recovery across the distributed network of nodes and utilized the leader lease mechanism, similar to those used by geo distributed databases such as Cockroach DB and YugaByte DB.",
+      tagline: "Fault-Tolerant Key-Value Store with Leader Leases",
+      bullets: [
+        "Implemented a database storing string key-value pairs using Raft Consensus Algorithm, ensuring consistent data replication and fault recovery across the distributed network of nodes.",
+        "Utilized the leader lease mechanism, similar to those used by geo distributed databases such as Cockroach DB and YugaByte DB.",
+      ],
       technologies: [
         "Python",
         "ZeroMQ",
@@ -299,8 +318,11 @@ export const DATA = {
       href: "https://github.com/Vaibtan/Distributed-Database-with-Raft-Consensus-Algorithm",
       dates: "March 2025",
       active: true,
-      description:
-        "Developed MetroSense, a novel web-based platform to empower visually impaired individuals navigate the Delhi Metro system, achieving 65.1% mAP@50 for identifying environmental elements from real-time image captures. Integrated LLAMA Vision 3.2 90B for sophisticated VQA, engineered with context-rich, few-shot prompting and optimized decoding parameters to achieve a BERT F1 score of 0.85, delivering semantically accurate, context-aware voice-synthesized responses to user queries for improved safety and autonomy.",
+      tagline: "Assistive Navigation for Visually Impaired Metro Users",
+      bullets: [
+        "Developed MetroSense, a novel web-based platform to empower visually impaired individuals navigate the Delhi Metro system, achieving 65.1% mAP@50 for identifying environmental elements from real-time image captures.",
+        "Integrated LLAMA Vision 3.2 90B for sophisticated VQA, engineered with context-rich, few-shot prompting and optimized decoding parameters to achieve a BERT F1 score of 0.85, delivering semantically accurate, context-aware voice-synthesized responses to user queries for improved safety and autonomy.",
+      ],
       technologies: [
         "Python",
         "PyTorch",
@@ -324,8 +346,11 @@ export const DATA = {
       href: "https://github.com/Vaibtan/Machine-Learning-Project",
       dates: "July 2024",
       active: true,
-      description:
-        "Developed and benchmarked novel models (GAN, Neural ODE VAE, Neural ODE Classifier) for stock market analysis, achieving a 15% F1 improvement and 85% faster training via Neural ODEs.Implemented a CNN-LSTM architecture delivering high-accuracy regression (R² 0.99, MAE 143.58 on S&P 500) across five major indices on the CNNPred dataset.",
+      tagline: "Neural ODE & GAN-Based Financial Forecasting",
+      bullets: [
+        "Developed and benchmarked novel models (GAN, Neural ODE VAE, Neural ODE Classifier) for stock market analysis, achieving a 15% F1 improvement and 85% faster training via Neural ODEs.",
+        "Implemented a CNN-LSTM architecture delivering high-accuracy regression (R² 0.99, MAE 143.58 on S&P 500) across five major indices on the CNNPred dataset.",
+      ],
       technologies: ["Pytorch", "Transformers", "Scikit-Learn", "Pandas"],
       links: [
         {
@@ -342,8 +367,11 @@ export const DATA = {
       href: "https://github.com/Vaibtan/CSE-530-Distributed-Systems/tree/main/Assignment%201/gRPC",
       dates: "June 2024",
       active: true,
-      description:
-        "Created a distributed online marketplace system, architected to facilitate direct transactions between buyers and sellers through a central platform hosted on Google Cloud VM instances, leveraging gRPC for communication and Protocol Buffers for efficient data serialization.",
+      tagline: "Distributed Marketplace over gRPC & Protobuf",
+      bullets: [
+        "Created a distributed online marketplace system, architected to facilitate direct transactions between buyers and sellers through a central platform hosted on Google Cloud VM instances.",
+        "Leveraging gRPC for communication and Protocol Buffers for efficient data serialization.",
+      ],
       technologies: [
         "Python",
         "gRPC",
@@ -364,8 +392,11 @@ export const DATA = {
       href: "https://github.com/Vaibtan/CSE-530-Distributed-Systems/tree/main/Assignment%202",
       dates: "April 2024",
       active: true,
-      description:
-        "Implemented a distributed Map-Reduce framework comprising of Master, Mapper and Reducer components to perform K Means Clustering on a given dataset ensuring fault tolerance for both components and utlized gRPC for communication among the three processes for each iteration.",
+      tagline: "Distributed Clustering with Fault-Tolerant Map-Reduce",
+      bullets: [
+        "Implemented a distributed Map-Reduce framework comprising of Master, Mapper and Reducer components to perform K Means Clustering on a given dataset ensuring fault tolerance for both components.",
+        "Utlized gRPC for communication among the three processes for each iteration.",
+      ],
       technologies: [
         "Python",
         "gRPC",
@@ -385,8 +416,11 @@ export const DATA = {
       href: "https://github.com/Vaibtan/CSE511_CA_project",
       dates: "",
       active: true,
-      description:
-        "Implemented a simulator for a processor based on RV32I variant of RISC-V ISA where the microarchitecture included a 5 stage pipeline allowing forwarding/bypassing and separate execution unit for Network on Chip operations,along with a 2-way set associative cache following Least Recently Used replacement policy.",
+      tagline: "RISC-V Pipeline Simulator with Cache & Forwarding",
+      bullets: [
+        "Implemented a simulator for a processor based on RV32I variant of RISC-V ISA where the microarchitecture included a 5 stage pipeline allowing forwarding/bypassing and separate execution unit for Network on Chip operations.",
+        "Along with a 2-way set associative cache following Least Recently Used replacement policy.",
+      ],
       technologies: [
         "C++",
       ],

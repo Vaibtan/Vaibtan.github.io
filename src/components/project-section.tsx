@@ -22,12 +22,10 @@ export default function ProjectSection({ isHome }: Props) {
           >
             <ProjectCard
               href={project.href}
-              key={project.title}
               title={project.title}
-              description={project.description}
+              tagline={project.tagline}
+              bullets={project.bullets}
               tags={project.technologies}
-              image={project.image}
-              video={project.video}
             />
           </BlurFade>
         );

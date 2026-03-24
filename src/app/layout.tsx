@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
@@ -71,8 +72,9 @@ export default function RootLayout({
         <div className="bg-noise" />
         <ThemeProvider attribute="class" defaultTheme="dark">
           <TooltipProvider delayDuration={0}>
-            {children}
             <Navbar />
+            {children}
+            <Footer />
             <Toaster />
           </TooltipProvider>
         </ThemeProvider>

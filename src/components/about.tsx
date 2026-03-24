@@ -3,81 +3,66 @@
 import { CodeGraph } from "@/components/code-graph";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+import { motion } from "framer-motion";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function About() {
     return (
-        <section id="about" className="py-24">
-            <div className="flex flex-col md:flex-row items-center gap-12">
+        <section id="about" className="py-24 relative">
+            {/* Subtle section divider */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+            <div className="flex flex-col md:flex-row items-center gap-16">
                 {/* Left Content */}
-                <div className="flex-1 space-y-8">
-                    <Badge variant="outline" className="text-neon-green border-neon-green/20 bg-neon-green/5 px-4 py-1">
+                <motion.div
+                    className="flex-1 space-y-8"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <Badge variant="outline" className="text-neon-green border-neon-green/20 bg-neon-green/[0.04] px-4 py-1.5">
                         About Me
                     </Badge>
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+
+                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
                         EVERYTHING ABOUT <br />
-                        <span className="font-serif italic text-white/50">{DATA.name.split(" ")[0].toUpperCase()}</span>
+                        <span className="font-serif italic text-white/40">{DATA.name.split(" ")[0].toUpperCase()}</span>
                     </h2>
 
-                    <div className="space-y-4 text-neutral-400 text-lg leading-relaxed">
+                    <div className="space-y-5 text-neutral-400 text-base md:text-lg leading-relaxed">
                         <p>
-                            Hi, <strong className="text-white">{DATA.name}</strong> a passionate <strong className="text-white">Full Stack Developer</strong> who loves crafting modern web applications that are both beautiful on the surface and powerful under the hood.
+                            Hi, I&apos;m <strong className="text-white font-medium">{DATA.name}</strong> — an <strong className="text-white font-medium">Applied AI Engineer</strong> who builds end-to-end ML systems that ship to production, from model training to containerized deployment at scale.
                         </p>
                         <p>
-                            With expertise in <strong className="text-neon-green">React, Next.js, Node.js, Express, and PostgreSQL</strong>, I bring together intuitive design and efficient functionality. My experience with authentication systems, payment gateways, and cloud deployment makes me confident in delivering production-ready solutions for real-world clients.
+                            My core stack spans <strong className="text-neon-green/80">PyTorch, FastAPI, LangChain, Docker, and PostgreSQL</strong>. I&apos;ve built computer vision pipelines with YOLO and CLIP, multi-agent LLM systems, and MLOps platforms handling millions of records — all with rigorous testing and CI/CD.
                         </p>
                         <p>
-                            Whether it&apos;s a <span className="text-white italic font-serif">Startup MVP</span> or a scalable enterprise application, I focus on writing clean, maintainable code and creating experiences that users love.
+                            Whether it&apos;s a <span className="text-white/80 italic font-serif">zero-to-one AI product</span> or scaling existing infrastructure, I focus on reliability, low-latency inference, and clean architecture that teams can build on.
                         </p>
                     </div>
 
-                    <Link href="#contact" className="inline-flex items-center gap-2 text-neon-green border-b border-neon-green/20 pb-1 hover:border-neon-green transition-colors uppercase font-bold tracking-wider text-sm">
-                        More About Me <ArrowRightIcon className="size-4" />
+                    <Link
+                        href="#contact"
+                        className="group inline-flex items-center gap-2 text-neon-green border-b border-neon-green/20 pb-1 hover:border-neon-green/60 transition-all duration-300 uppercase font-bold tracking-wider text-sm"
+                    >
+                        More About Me
+                        <ArrowRightIcon className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
-                </div>
+                </motion.div>
 
                 {/* Right Animation */}
-                <div className="flex-1 relative h-[500px] w-full flex items-center justify-center">
+                <motion.div
+                    className="flex-1 relative h-[500px] w-full flex items-center justify-center"
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                >
                     <CodeGraph />
-                </div>
+                </motion.div>
             </div>
         </section>
     );
 }
-
-const Icons = {
-    react: () => (
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="size-6">
-            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#61DAFB" strokeWidth="1.5" />
-            <ellipse cx="12" cy="12" rx="3" ry="8" transform="rotate(45 12 12)" stroke="#61DAFB" strokeWidth="1.5" />
-            <ellipse cx="12" cy="12" rx="3" ry="8" transform="rotate(-45 12 12)" stroke="#61DAFB" strokeWidth="1.5" />
-        </svg>
-    ),
-    nextjs: () => (
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="size-6">
-            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" strokeWidth="1.5" />
-            <path d="M15 9L9 15" stroke="white" strokeWidth="1.5" />
-            <path d="M9 9V15" stroke="white" strokeWidth="1.5" />
-        </svg>
-    ),
-    nodejs: () => (
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="size-8">
-            <path d="M12 2L20 6V18L12 22L4 18V6L12 2Z" fill="#339933" />
-        </svg>
-    ),
-    postgresql: () => (
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="size-8">
-            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#336791" strokeWidth="2" strokeLinejoin="round" />
-            <path d="M2 17L12 22L22 17" stroke="#336791" strokeWidth="2" strokeLinejoin="round" />
-            <path d="M2 12L12 17L22 12" stroke="#336791" strokeWidth="2" strokeLinejoin="round" />
-        </svg>
-    ),
-    typescript: () => (
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="size-6">
-            <rect x="2" y="2" width="20" height="20" rx="4" fill="#3178C6" />
-            <path d="M12 16H10V10H14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M16 16C17.1046 16 18 15.1046 18 14" stroke="white" strokeWidth="2" strokeLinecap="round" />
-        </svg>
-    ),
-};
